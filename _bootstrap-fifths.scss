@@ -1,0 +1,31 @@
+// ============================
+// Bootstrap Fifths
+// ============================
+
+.col-xs-2p4, .col-sm-2p4, .col-md-2p4, .col-lg-2p4{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@mixin fifths($size){ 
+  .col-#{$size}-2p4{
+    float: left;
+    width: 20%;
+  }
+  .col-#{$size}-pull-2p4{
+    right: 20%;
+  }
+  .col-#{$size}-push-2p4{
+    left: 20%;
+  }
+  .col-#{$size}-push-2p4{
+    margin-left: 20%;
+  }
+}
+
+@include fifths(xs);
+@media (min-width: 768px)  { @include fifths(sm); }
+@media (min-width: 992px)  { @include fifths(md); }
+@media (min-width: 1200px) { @include fifths(lg); }
